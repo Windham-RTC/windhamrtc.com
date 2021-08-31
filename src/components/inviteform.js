@@ -1,9 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import axios from 'axios'
-import { graphql, useStaticQuery, Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
-import clsx from 'classnames'
 
 import Button from 'components/button'
 import FadeText from 'components/fade-text'
@@ -40,6 +38,8 @@ const InviteForm = () => {
         body: `Success! You've been added to our mailing list.`,
       })
     } catch (err) {
+      console.warn({ err })
+
       if (err?.response?.data?.code === 101) {
         return setMessage({
           error: true,
