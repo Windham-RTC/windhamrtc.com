@@ -72,7 +72,12 @@ exports.handler = async function (event, context) {
     }
   } catch (err) {
     console.log('err', err)
-    if (err?.response?.body?.title === 'Member Exists')
+    if (
+      err &&
+      err.response &&
+      err.response.body &&
+      err.response.body.title === 'Member Exists'
+    )
       return {
         statusCode: 500,
         body: JSON.stringify({
