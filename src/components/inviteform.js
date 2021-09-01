@@ -64,9 +64,9 @@ const InviteForm = () => {
   })
 
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center space-y-6 lg:space-y-0 lg:space-x-12">
-      <div className="text-center lg:text-left lg:w-1/2">
-        <h2 className="font-montserrat text-3xl font-extrabold tracking-tight text-gray-900 sm:block sm:text-4xl">
+    <section className="flex flex-col lg:flex-row items-center justify-center space-y-24 lg:space-y-0 lg:space-x-12">
+      <div className="relative text-center lg:text-left lg:w-1/2">
+        <h2 className="font-montserrat text-3xl tracking-tight text-gray-900 sm:block sm:text-4xl">
           We're rebuilding the local Republican Party!
         </h2>
         <p className="font-montserrat text-3xl font-extrabold tracking-tight text-rtc-blue sm:block sm:text-4xl">
@@ -98,21 +98,23 @@ const InviteForm = () => {
             </Button>
           </div>
         </form>
-        <RecaptchaText focused={focused} />
-        {/* errorText / success text */}
-        <FadeText
-          show={message?.body}
-          className={message?.error ? 'text-red-500' : 'text-green-500'}
-        >
-          {message.body}
-        </FadeText>
+        <div className="absolute">
+          <RecaptchaText focused={focused} />
+          {/* errorText / success text */}
+          <FadeText
+            show={message?.body}
+            className={message?.error ? 'text-red-500' : 'text-green-500'}
+          >
+            {message.body}
+          </FadeText>
+        </div>
       </div>
       <div>
         <StaticImage
           width={450}
           placeholder="tracedSVG"
           src="../images/logo.png"
-          alt="Windham RTC Logo"
+          alt="Windham Connecticut Republican Committee"
         />
       </div>
     </section>

@@ -28,7 +28,7 @@ h6 {
 }
 
 .mdx-content h1 {
-  @apply font-montserrat;
+  @apply font-montserrat text-rtc-blue;
 }
 
 /* Visually hide recaptcha badge */

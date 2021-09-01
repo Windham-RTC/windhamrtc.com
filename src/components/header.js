@@ -8,18 +8,21 @@ const Header = ({ location }) => (
   <header className="relative p-6 pb-0 flex flex-col justify-center md:flex-row">
     <div className="text-center">
       <AnimatePresence exitBeforeEnter>
-        <motion.div
+        <motion.h1
           key={location.pathname}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
         >
-          <Link className="font-bold text-2xl whitespace-nowrap" to="/">
-            <h1>Windham RTC</h1>
+          <Link
+            className="font-bold text-2xl whitespace-nowrap text-rtc-red hover:text-rtc-red-300"
+            to="/"
+            alt="Windham Connecticut Republican Town Committee"
+          >
+            Windham RTC
           </Link>
-        </motion.div>
+        </motion.h1>
       </AnimatePresence>
     </div>
     <Navbar />

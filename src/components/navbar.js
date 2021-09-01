@@ -3,12 +3,12 @@ import { motion } from 'framer-motion'
 import { Link } from 'gatsby'
 
 const NavLink = (props) => (
-  <motion.div whileTap={{ scale: 1.2 }}>
+  <motion.div whileTap={{ scale: 0.9 }}>
     <Link
       {...props}
-      className="transition hover:underline"
+      className="transition hover:underline hover:text-gray-700"
       activeClassName="underline"
-      partiallyActive={true}
+      // partiallyActive={true}
     />
   </motion.div>
 )
@@ -16,6 +16,9 @@ const NavLink = (props) => (
 const Navbar = () => (
   <nav className="font-montserrat mt-8 md:mt-0 text-xl tracking-widest w-full flex items-center justify-center md:justify-end">
     <ul className="space-x-6 flex flex-row items-center justify-center">
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
       <li>
         <NavLink to="/contact">Contact</NavLink>
       </li>

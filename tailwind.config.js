@@ -6,7 +6,10 @@ module.exports = {
     extend: {
       colors: {
         rtc: {
-          red: 'rgb(191, 5, 1)',
+          red: {
+            300: 'hsl(1, 99%, 48%)',
+            DEFAULT: 'hsl(1, 99%, 38%)',
+          },
           blue: {
             300: 'hsl(246, 95%, 47%)',
             DEFAULT: 'hsl(246, 95%, 37%)',

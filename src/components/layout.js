@@ -7,15 +7,12 @@ import SEO from 'components/seo'
 import Header from 'components/header'
 import Footer from 'components/footer'
 
-import Star from 'images/star.inline.svg'
-
 const { GATSBY_RECAPTCHA_SITE_KEY } = process.env
 
 const Layout = ({ children, location }) => {
   return (
     <GoogleReCaptchaProvider reCaptchaKey={GATSBY_RECAPTCHA_SITE_KEY}>
       <div className="relative grid grid-rows-[auto,1fr] grid-cols-[1fr] min-h-screen min-w-screen">
-        {/* <Star className="absolute top-0 left-0 h-[100vh] w-[100vw] mix-blend-difference text-rtc-red" /> */}
         <SEO title="Windham RTC" />
         <div
           className="hidden sm:block sm:fixed sm:inset-y-0 sm:h-full sm:w-full"

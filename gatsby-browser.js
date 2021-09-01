@@ -2,6 +2,8 @@ import React from 'react'
 import Layout from 'components/layout'
 
 import '@fontsource/montserrat'
+import '@fontsource/montserrat/600.css'
+import '@fontsource/montserrat/800.css'
 import '@fontsource/open-sans'
 import 'css/index.css'
 
