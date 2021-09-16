@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
 
 import SEO from 'components/seo'
-import Header from 'components/header'
+import Navbar from 'components/navbar'
 import Footer from 'components/footer'
 
 const { GATSBY_RECAPTCHA_SITE_KEY } = process.env
@@ -85,7 +85,7 @@ const Layout = ({ children, location }) => {
             </svg>
           </div>
         </div>
-        <Header location={location} />
+        <Navbar location={location} />
         <AnimatePresence exitBeforeEnter>
           <motion.div
             className="relative"

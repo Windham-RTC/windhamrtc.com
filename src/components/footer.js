@@ -6,7 +6,6 @@ const Footer = ({ location }) => (
     <AnimatePresence exitBeforeEnter>
       <motion.div
         className="text-indigo-600 hover:text-indigo-400 text-2xl font-bold"
-        key={location.pathname}
         initial={{ rotate: 0, scale: 1, x: 200, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ type: 'spring', bounce: 0.25 }}
