@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
@@ -40,17 +41,26 @@ const Navbar = ({ location }) => {
             <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between h-16">
                 <div className="flex">
-                  <div className="flex-shrink-0 flex items-center space-x-5">
-                    <StaticImage
-                      width={50}
-                      placeholder="tracedSVG"
-                      src="../images/elephant.png"
-                      alt="Windham Connecticut Republican Town Committee"
-                    />
-                    <h2 className="font-bold text-rtc-red text-lg">
-                      Windham RTC
-                    </h2>
-                  </div>
+                  <motion.div
+                    whileHover={{ scale: 0.95 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="flex items-center"
+                  >
+                    <Link
+                      to="/"
+                      className="flex-shrink-0 flex items-center space-x-5"
+                    >
+                      <StaticImage
+                        width={50}
+                        placeholder="tracedSVG"
+                        src="../images/elephant.png"
+                        alt="Windham Connecticut Republican Town Committee"
+                      />
+                      <h2 className="font-bold text-rtc-red text-lg">
+                        Windham RTC
+                      </h2>
+                    </Link>
+                  </motion.div>
                   <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                     {/* desktop */}
                     {NAV_LINKS.map(([name, path]) => (

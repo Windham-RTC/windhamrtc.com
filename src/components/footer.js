@@ -14,9 +14,9 @@ const Footer = ({ location }) => (
         }}
       >
         <a
-          href="https://facebook.com/windhamrtc"
+          href="https://www.facebook.com/WindhamCtRepublicans"
           target="_blank"
-          rel="noreferrer"
+          rel="noreferrer noopener"
         >
           Facebook
         </a>
