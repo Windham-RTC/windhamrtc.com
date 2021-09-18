@@ -32,7 +32,6 @@ const NavLink = ({ mobile = false, ...props }) => (
 )
 
 const Navbar = ({ location }) => {
-  console.log(location)
   return (
     <header className="relative">
       <Disclosure as="nav" className="bg-white shadow">
@@ -64,7 +63,9 @@ const Navbar = ({ location }) => {
                   <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                     {/* desktop */}
                     {NAV_LINKS.map(([name, path]) => (
-                      <NavLink to={path}>{name}</NavLink>
+                      <NavLink to={path} key={path}>
+                        {name}
+                      </NavLink>
                     ))}
                   </div>
                 </div>
@@ -86,7 +87,7 @@ const Navbar = ({ location }) => {
               <div className="pt-2 pb-3 space-y-1">
                 {/* mobile */}
                 {NAV_LINKS.map(([name, path]) => (
-                  <NavLink to={path} mobile>
+                  <NavLink to={path} key={path} mobile>
                     {name}
                   </NavLink>
                 ))}
