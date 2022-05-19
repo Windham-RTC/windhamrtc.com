@@ -1,0 +1,33 @@
+{
+  "name": "windhamrtc",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "Cody Barr <cody.barr@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "sanity start",
+    "test": "sanity check"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "^2.30.0",
+    "@sanity/components": "^2.14.0",
+    "@sanity/core": "^2.30.0",
+    "@sanity/default-layout": "^2.30.0",
+    "@sanity/default-login": "^2.30.0",
+    "@sanity/desk-tool": "^2.30.0",
+    "@sanity/vision": "^2.30.0",
+    "prop-types": "^15.6",
+    "react": "^16.2",
+    "react-dom": "^16.2",
+    "styled-components": "^5.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Windham-RTC/windhamrtc.com.git"
+  }
+}

@@ -13,6 +13,7 @@ function classNames(...classes) {
 const NAV_LINKS = [
   ['Home', '/'],
   ['Meetings', '/meetings'],
+  ['Officers', '/officers'],
   ['Contact', '/contact'],
 ]
 
